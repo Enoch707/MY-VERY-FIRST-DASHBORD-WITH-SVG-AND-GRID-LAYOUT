@@ -1,0 +1,888 @@
+@font-face {
+    font-family: inter;
+    src: url(C:\Users\FUJITSU\Downloads\Inter.ttf);
+}
+@font-face {
+    font-family: Pop;
+    src: url(Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: popi;
+    src: url(Poppins-Bold.ttf);
+}
+:root{
+    --font:'Pop';
+    --font2:'popi';
+    --font3:'inter';
+    --primarycolour:rgb(3, 3, 3);
+    --secondcolour: rgb(54, 53, 53);
+    --color4: #181824;
+    --txtcolor: rgb(234, 232, 232);
+    --secondtxtcolor: linear-gradient(135deg, rgb(2, 2, 2) 50%,white);
+    
+}
+*{
+  
+    border: 0;
+    margin: 0;
+    padding: 0;
+    color: var(--txtcolor);
+    text-decoration: none;
+    font-family: var(--font);
+    
+}
+a, label{
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    outline: none;
+}
+html{
+    background-color: var(--primarycolour);
+}
+hr{
+    color: var(--txtcolor)
+}
+.container{
+    display: flex;
+   
+
+}
+header{
+   
+    background-color: var(--secondcolour);
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    gap: 27px;
+    
+   
+}
+#menu-toogle,
+.ham{
+    display: none;
+}
+.nav{
+    width: 18%;
+    line-height: 30px;
+    background-color: var(--secondcolour);
+    min-width: 210px;
+    
+    
+}
+
+
+.nav h2{
+    margin-top: 10px;
+    margin-left:20px;
+    border:none
+}
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 30px;
+    transition: 0.3s ease-in;  
+    margin-top: 10px; 
+    
+}
+.nav nav a:hover,
+.nav nav a:focus{
+    border: 0.1px solid rgb(61, 61, 61);
+    border-bottom: solid 5px rgb(37, 37, 37);
+    padding: 5px;
+    border-radius: 150px ;
+    width:fit-content;
+    transform: scale(1.1);
+}
+
+.navcontent1{
+    margin-left: -10px;
+    color: black;
+    font-family: var(--font2);
+    font-size: larger;
+
+
+}
+.navcontent{
+    font-size: smaller ;
+}
+.report h3{
+    margin-left: -10px;
+}
+.report button{
+    background:linear-gradient(135deg, black ,rgb(63, 63, 63)) ;
+    padding: 5px;
+    width: 120px;
+    border-radius: 15px;
+    color: #000;
+   
+
+}
+.maincontent{
+    flex:1;
+    padding:20px;
+}
+
+
+#menu-toogle{
+    display: none;
+}
+label{
+    display: none;
+}
+#con{
+    display: none;
+}
+input{
+    display: none;
+}
+.dan{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-left: 15px;
+    padding: 10px;
+
+}
+.dic1{
+    background-color: var(--primarycolour);
+    border-radius: 30px;
+    margin-right:30px ;
+    
+
+    
+
+}
+.report-item{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 15px;
+    padding: 9px;
+    margin-top: 15px;
+    margin-bottom: 9px;
+    transition: 0.2s ease-out;
+
+}
+.dic{
+    background-color: var(--primarycolour);
+    border-radius: 30px;
+    margin-right: 30px;
+}
+
+.dic2{
+    background-color: var(--primarycolour);
+    border-radius: 30px;
+    margin-right: 30px;
+
+}
+.BAN{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-left: 10px;
+    transition: 0.3s ease-in;
+}
+/*----------------------------------main content graphs---------------------------*/
+.first{
+    display: grid;
+    grid-template-columns:repeat(3 , minmax(186.20px,1fr)) ;
+    grid-template-rows:repeat(2,1fr) ;
+    gap: 15px;
+    height: 70%;
+    grid-template-areas: 'a b c'
+                        'd e f'
+                        ;
+
+}
+.graph{
+    background-color: aliceblue;
+    border-radius: 30px;
+}
+.a{
+    grid-area: a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: auto;
+    text-align: center;
+    gap: 15px;
+    background-image: linear-gradient(210deg,#0f172a , #1e293b );
+
+
+}
+.a p{
+    font-size: 25px ;
+    color: #f8fafc;
+    font-family: var(--font3);
+    font-weight: 700;
+
+}
+.a span,
+.b span{
+    font-size: 50px;
+    color: #38bdf8;
+    font-family: var(--font2);
+
+}
+.b{
+    grid-area:b ;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap :15px;
+    background-image: linear-gradient(210deg,#022c22 , #064e3b );
+
+}
+
+.b p{
+    font-size: 25px;
+    font-family: var(--font3);
+    color: #f0fdf4;
+    font-weight: 700;
+}
+.b span{
+    color:#34d399
+}
+.c{
+    color: rgb(248, 166, 43);
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    text-align: center;
+    font-size: 30px;
+    font-family: var(--font2);
+    background-image: linear-gradient(210deg,rgb(93, 40, 12),rgb(198, 87, 2));
+}
+.d{
+     display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    text-align: center;
+    font-size: 30px;
+    font-family: var(--font2);
+    color: rgb(228, 3, 228);
+    background-image:linear-gradient(210deg,rgb(84, 5, 71),rgb(140, 2, 171));
+}
+.c{background-color: var(--secondcolour);}
+.d{background-color: var(--secondcolour);}
+.show{
+    display: grid;
+    gap: 15px;
+    grid-area: c
+}
+.e{
+    background-color: var(--secondcolour);
+    grid-area: 2/1/2/-1;
+    grid-area: d e f;
+    
+}
+.second{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    height: 30%;
+    grid-template-areas: 'e f';
+}
+.f{
+    background-color: var(--secondcolour);
+    margin-top: 15px;
+    grid-area: e;
+}
+.g{
+    background-color: var(--color4);
+  margin-top: 15px;
+  grid-area: f;
+}
+.h{background-color: var(--secondcolour);}
+/*for graph*/
+.graph.e {
+  background: var(--color4);
+  padding: 20px;
+  border-radius: 16px;
+  color: #ffffff;
+}
+
+.line-chart {
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+}
+
+.line {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.line-blue { stroke: #00d2ff; }
+.line-pink { stroke: #ff2a85; }
+/*------------------conal pie chart=====================*/
+.graph.f {
+  background: var(--color4);
+  padding: 20px;
+  border-radius: 16px;
+  color: #ffffff;
+}
+
+.chart-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 15px;
+}
+
+/* Donut Chart using conic-gradient */
+.donut-chart {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #00d2ff 0% 45%,    /* Sales */
+    #a200ff 45% 65%,   /* Setup */
+    #ff2a85 65% 85%,   /* Bug */
+    #28d07f 85% 100%   /* Features */
+  );
+  /* Cuts out the inner center */
+  mask: radial-gradient(farthest-side, transparent 62%, #000 63%);
+  -webkit-mask: radial-gradient(farthest-side, transparent 62%, #000 63%);
+}
+
+.legend p {
+  margin: 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Colored dot indicators for the legend */
+.legend p::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend .sales::before { background: #00d2ff; }
+.legend .setup::before { background: #a200ff; }
+.legend .bug::before { background: #ff2a85; }
+.legend .features::before { background: #28d07f; }
+
+h4{
+    margin-left: 15px;
+}
+.lll{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    gap: 6px;
+    height: auto;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.lll p{
+    font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px
+}
+.lll p::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.ss{
+  
+    background-color: transparent;
+    background-image: linear-gradient(to right, red 1px,transparent 1px),
+    linear-gradient(to bottom ,red 1px,transparent 1px);
+    background-size: 50px 50px;
+
+
+
+
+}
+
+.lll .l1::before { background: #ff2a85; }
+.lll .l2::before { background: #a200ff; }
+/* .cirle1{
+        margin-left:10px ;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: linear-gradient( 135deg,purple,blue
+        );
+        mask: radial-gradient(farthest-side,transparent 62%,black 63%); 
+
+}*/
+.gen{
+    position: relative;
+    width:150px ;
+    height: 150px;
+    margin: 10px  ;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+.ring{
+    margin-top: 40px ;
+    margin-left: 30px;
+    position: absolute;
+    border-radius: 50%;
+
+    mask: radial-gradient(farthest-side,transparent 80%,black 82%);
+}
+.outer-ring{
+    width: 200px;
+    height: 200px;
+    background:conic-gradient(#ff2a85 0% 70%,transparent 70% 100%) ;
+    transform: rotate(-90deg);
+}
+.inner-ring{
+    width: 160px;
+    height: 160px;
+    background: conic-gradient(#a200ff 0% 85%, transparent 85% 100%);
+    transform: rotate(-90deg);
+}
+.chart-center-text{
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+.chart-center-text p{
+    font-size: 20px;
+    opacity: 0.8;
+    margin: 0;
+
+}
+.chart-center-text .onet{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 2px;
+}
+aside{
+    width: 25%;
+     
+     margin-top: 15px;
+    margin-bottom: 15px; 
+}
+.aside{
+    width: 100%;
+    display: grid;
+    height: 100%;
+    grid-template-columns: minmax(360px,1fr);
+    gap: 10px;
+    
+
+}
+.poa{
+    z-index: 4;
+    background-repeat: no-repeat;
+    background: url(doc.svg);
+    background-size: cover;
+}
+.curv {
+   
+   
+    width: 100%;
+    height: 60%; /* Controls how tall the wave is relative to the yellow box */
+    margin-top: auto; /* Pushes the chart to the very bottom */
+}
+.curv svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.pp{
+    display: grid;
+    padding: 15px; /* Adds breathing room around your text */
+    z-index: 2; /* Keeps text above the chart */
+}
+.i{
+    width: 100%;
+    grid-area: 1/1/2/2;
+   background: linear-gradient(135deg,rgb(130, 130, 2),rgb(200, 214, 2));
+   border-radius: 15px;
+   display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* This clips the wave so it doesn't break your rounded corners */
+    position: relative;
+   
+   
+}
+.i p{
+    color: #f1f102;
+    
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    font-family: var(--font2);
+}
+.j{
+    width: 100%;
+    grid-area: 2/1/3/2;
+    background: linear-gradient(135deg,rgb(110, 11, 1),rgb(174, 1, 1));
+    border-radius: 15px;
+}
+.j p{
+    color: rgb(214, 6, 6);
+    font-family: var(--font2);
+    font-size: 21px;
+}
+svg{
+    /* border: 1px solid white; */
+    width: 98%;
+    height: 90% ;
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+rect{
+    fill:rgb(214, 6, 6) ;
+}
+.ab {
+  width: 30px;
+  height: 290px;
+  x: 10;
+  /* 500 (total height) - 290 (bar height) = 210 */
+  y: 210; 
+}
+
+.bb {
+  width: 30px;
+  height: 390px;
+  x: 70;
+  /* 500 - 390 = 110 */
+  y: 110;
+}
+
+.cb {
+  width: 30px;
+  height: 390px;
+  x: 130;
+  /* 500 - 390 = 110 */
+  y: 110;
+}
+
+.db {
+  width: 30px;
+  height: 290px;
+  x: 190;
+  /* 500 - 290 = 210 */
+  y: 210;
+}
+.eb{
+    width: 30px;
+    height: 290px;
+    x: 250;
+    y: 210;
+  
+
+}
+.fb{
+    width: 30px;
+    height: 290px;
+    x: 300;
+    y: 210;
+   
+
+}
+
+
+
+
+/*----------------------------------main content graphs---------------------------*/
+@media(max-width:720px){
+    .navtop .h2{
+        border: none;
+        color: var(--txtcolor);
+    }
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        overflow-x: hidden;
+        margin: 0;
+        width: 100%;
+    }
+    .container{
+        max-width: 100%;
+        width: 100%;
+        
+    }
+    .report h3,
+    p{
+        color: var(--primarycolour);
+        font-weight: 900;
+    }
+    .nav-menu .report-item{
+        
+        display: block;
+        padding: 15px;
+         
+        
+    }
+    .dic{
+        background-color: var(--primarycolour);
+        width: 90%;
+        border-radius: 30px;
+        transition: 2s ease-in-out;
+    }
+    .BAN{
+        margin-left: 20px;
+        padding: 15px;
+        padding-bottom: 10px;
+        transition: 0.4s ease-in;
+    }
+    .rose{
+        display: block;
+        margin-right:15px ;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .navcontent1{
+       color: var(--primarycolour);
+       font-weight: bolder;
+    }
+    .nav{
+        width: 100%;
+        min-width: unset;
+        padding-bottom: 20px;
+    }
+    .maincontent,
+    aside{
+        width: 100%;
+    }
+    .nav-menu{
+        display: none;
+    }
+  
+    .navtop{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    .ham{
+        display: block;
+        font-size: 28px;
+        color: var(--primarycolour);
+        cursor: pointer;
+        user-select: none;
+    }
+    #menu-toogle:checked ~ .nav-menu{
+        display: block;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .rep{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #con:checked ~ .dic{
+        display: none;
+        transition: 2s ease;
+
+    }
+    #con2{
+        display: none;
+    }
+    
+    .rose2{
+        display: block;
+        margin-right: 15px;
+    }
+    .con1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .dic1{
+        display: flex;
+        flex-direction: column;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: height 1s ease-in, opacity 1s ease-in ;
+        
+
+    }
+    .rose4{
+        display: block;
+        margin-right: 15px;
+    }
+    .dan{
+        margin-left:10px ;
+        margin-top: 10px;
+        transition: 0.5s ease-in-out;
+    }
+    #con2:checked ~ .dic1{
+        height: auto;
+        opacity: 1;
+        background-color: var(--primarycolour);
+        border-radius:15px ;
+        gap: 15px;
+
+    }
+    #con2:checked ~ .con1 .rose2  {
+        color:var(--primarycolour);
+    }
+    .channels{
+        display: flex;
+        justify-content: space-between;
+    }
+    .dic2{
+        display: flex;
+        flex-direction: column;
+    }
+    #con3:checked ~ .dic2{
+        display: none;
+    }
+    #con3:checked ~ .channels .rose4{
+       color:var(--primarycolour);
+       font-size: larger;
+    }
+    /*------------------------------------------ grid for main dashboard----------------------------*/ 
+
+    .first{
+        display:flex;
+        flex-direction: column;
+        
+    } 
+    .a{
+       height: 300px;
+         
+    }
+    .b{
+        height: 300px;
+    }
+    .c{
+        height: 150px;
+    }
+    .d{
+        height: 150px;
+    }
+    .e{
+        height: 300px;
+    }
+    .second{
+        display: flex;
+        gap: 15px;
+        overflow-x:auto;
+        padding-bottom: 10px;
+        scroll-snap-type: x mandatory;
+        scroll-behavior:smooth;
+        scrollbar-color: rgb(214, 6, 6);
+    }
+    .second .graph{
+        flex: 0 0 95%;
+        scroll-snap-align: center;
+    }
+    .graph .f , .g{
+        height: 300px;
+        
+    }
+    aside{
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        margin: 5px;
+
+
+    }
+    .ss{
+        /* border: 1px solid white; */
+        height: 85%;
+        min-width: 500px;
+        margin-top: 30px;
+     
+    }
+    .ab{
+    width: 30px;
+    height: 290px;
+    x: 10;
+    y: 180;
+
+    }
+    .bb{
+        width: 30px;
+        height: 390px;
+        x: 70;
+        y: 12.5;
+
+    }
+    .cb{
+        width: 30px;
+        height: 390px;
+        x: 130;
+        y: 30.5 ;
+
+    }
+    .db{
+        width: 30px;
+        height: 290px;
+        x: 190;
+        y: 50;
+
+    }
+    .eb{
+        width: 30px;
+        height: 290px;
+        x: 250;
+        y: 150;
+        
+    
+
+    }
+    .fb{
+        width: 30px;
+        height: 290px;
+        x: 310;
+        y: 40;
+      
+    }
+    .gb{
+        width: 30px;
+        height: 290px;
+        x: 370;
+        y: 120;
+    }
+    .hb{
+        width: 30px;
+        height: 390px;
+        x: 430;
+        y: 20;
+    }
+    .ib{
+        width: 30px;
+        height: 290px;
+        x: 490;
+        y: 80;
+    }
+    .j{
+        width: 100%;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: mandatory;
+        scrollbar-color:rgb(214, 6, 6) ;
+        overflow-y: hidden;
+    }
+
+  
+
+}

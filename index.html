@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <header class="nav">
+            <div class="navtop">
+        
+            <h2 class="crm">CRM Dashboard</h2>
+           
+            <label for="menu-toogle" class="ham">&#9776;</label>
+        </div>
+            <input type="checkbox" id="menu-toogle">
+            
+            <nav class="nav-menu">
+                
+                <a href="#" class="navcontent1">Profile</a>
+                <input type="checkbox" id="con">
+                <input type="checkbox" id="con2">
+                <input type="checkbox" id="con3">
+                <div class="rep">
+                
+                <a href="#" class="navcontent1">Report</a>
+                <label for="con" class="rose">&#10005;</label>
+                </div>
+                <div class="dic">
+                <a href="#" class="navcontent report-item" >Graphs</a>
+                <a href="#" class="navcontent report-item">Texts</a>
+                </div>
+                <div class="channels">
+                <a href="#" class="navcontent1">CHANNELS</a>
+                <label for="con3" class="rose4">&#10005;</label>
+            </div>
+                <div class="dic2">
+                <a href="#" class="navcontent BAN">Email</a>
+                <a href="#" class="navcontent BAN">Phone Call</a>
+                <a href="#" class="navcontent BAN">Online Chat</a>
+                </div>
+                <div class="con1">
+                
+                <a href="#" class="navcontent1">TICKETS-STATUS</a>
+                <label for="con2" class="rose2">&#10005;</label>
+                </div>
+                <div class="dic1">
+                <a href="#" class="navcontent dan">Created</a>
+                <a href="#" class="navcontent dan">Open</a>
+                <a href="#" class="navcontent dan">Responded</a>
+                <a href="#" class="navcontent dan">Solved</a>
+                <a href="#" class="navcontent dan">Other</a>
+                <a href="#" class="navcontent dan">Deleted</a>
+                </div>
+                <hr>
+                <div class="report">
+                    <h3>Full Tickets Report</h3>
+                    <p>Download report</p>
+                    <button><a href="#" class="navcontent">Download</a></button>
+                </div>
+            </nav>
+            
+
+        </header>
+        <main class="maincontent">
+            <div class="first z">
+            <div class="graph a">
+                <p>Avg First Reply Time</p>
+                <p><span>30</span> h <span>15</span> min</p>
+            </div>
+            <div class="graph b">
+                <p>Avg Full Resolve Time</p>
+                <p><span>22</span> h <span>40</span> min</p>
+            </div>
+            <div class="show">
+            <div class="graph c">Messages</div>
+            <div class="graph d">Email</div>
+            </div>
+         <div class="graph e">Tickets created vs Tickets solved
+            <svg class="line-chart" viewBox="0 0 500 150">
+            <!-- Optional dashed grid lines -->
+            <line x1="0" y1="40" x2="500" y2="40" stroke="#2a2a3c" stroke-dasharray="4" />
+            <line x1="0" y1="90" x2="500" y2="90" stroke="#2a2a3c" stroke-dasharray="4" />
+
+            <!-- Blue Line (Created) -->
+            <path class="line line-blue" d="M0,100 C120,20 220,130 350,50 S450,80 500,20" />
+            
+            <!-- Pink Line (Solved) -->
+            <path class="line line-pink" d="M0,120 C120,70 220,110 350,90 S450,40 500,50" />
+        </svg>
+         </div>
+            </div>
+            <div class="second">
+            <div class="graph f">
+            <h4>Tickets By Type</h4>
+            
+            <div class="chart-container">
+                <!-- Donut rendered by CSS -->
+                <div class="donut-chart"></div>
+
+                <!-- Legend -->
+                <div class="legend">
+                <p class="sales">Sales</p>
+                <p class="setup">Setup</p>
+                <p class="bug">Bug</p>
+                <p class="features">Features</p>
+                </div>
+            </div>
+            </div>
+            <div id="gram" class="graph g">
+                <h4>New Tickets vs Returned Tickets</h4>
+                <div class="gen">
+                    <div class="ring outer-ring"></div>
+                    <div class="ring inner-ring"></div>
+
+                    <div class="chart-center-text" id="son">
+                    <p>Returned Tickets</p>
+                    <h3 class="onet">1,200</h3>
+                    </div>
+                </div>
+            
+                         
+                    <div class="lll">
+                    <p class="l1">New Tickets</p>
+                
+                    <p class="l2">Returned Tickets</p>
+                    </div>
+                
+            
+            </div>
+        </main>
+        <aside>
+            <div class="aside">
+            <div class="i">
+                <div class="pp">
+                <p> Full Reply and response </p>
+                </div>
+                <div class="curv"></div>
+            </div>
+            <div class="j">
+                <p>Number of tickets/Week Day</p>
+                
+                <svg class="ss" veiwBox="0 0 400 500">
+                   
+                    <rect class="ab"></rect>
+                    <rect class="bb"></rect>
+                    <rect class="cb"></rect>
+                    <rect class="db"></rect>
+                    <rect class="eb"></rect>
+                    <rect class="fb"></rect>
+                    <rect class="gb"></rect>
+                    <rect class="hb"></rect>
+                    <rect class="ib"></rect>
+                </svg>
+            </div>
+            </div>
+        </aside>
+        
+    </div>
+    <script>
+  // 1. Disable browser's automatic jump-to-top on refresh
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  // Helper to save scroll coordinates for both window and main container
+  function saveScroll() {
+    sessionStorage.setItem('winY', window.scrollY || document.documentElement.scrollTop);
+    const main = document.querySelector('main');
+    if (main) {
+      sessionStorage.setItem('mainY', main.scrollTop);
+    }
+  }
+
+  // 2. IMPORTANT: 'true' enables the capture phase so scroll events on <main> or <body> are caught
+  window.addEventListener('scroll', saveScroll, true);
+
+  // Helper to apply saved scroll coordinates
+  function restoreScroll() {
+    const winY = sessionStorage.getItem('winY');
+    const mainY = sessionStorage.getItem('mainY');
+
+    if (winY !== null) {
+      window.scrollTo(0, parseInt(winY, 10));
+      document.documentElement.scrollTop = parseInt(winY, 10);
+    }
+
+    const main = document.querySelector('main');
+    if (main && mainY !== null) {
+      main.scrollTop = parseInt(mainY, 10);
+    }
+  }
+
+  // 3. Restore immediately and retry after layout shifts/fonts settle
+  window.addEventListener('DOMContentLoaded', restoreScroll);
+  window.addEventListener('load', () => {
+    restoreScroll();
+    setTimeout(restoreScroll, 100);
+    setTimeout(restoreScroll, 300);
+  });
+</script>
+</body>
+</html>

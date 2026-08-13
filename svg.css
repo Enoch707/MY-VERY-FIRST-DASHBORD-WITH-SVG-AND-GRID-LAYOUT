@@ -1,0 +1,36 @@
+h3{
+    font-size: 30px;
+}
+svg{
+    width: 100vw;
+    height: 100vh;
+    border:1px;
+    border-style: dashed;
+    
+    
+}
+.cir{
+    r:100px;
+    cx: 200px;
+    cy: 200px;
+    /* fill:none;    */
+    stroke:rgb(51, 51, 51) ;
+    stroke-width: 5px;
+    transition: 2s ease;
+
+    
+}
+.rec{
+    width: 200px;
+    height: 200px;
+    fill: rgb(36, 36, 36);
+    x:350px;
+    y:200px;
+    stroke: aqua;
+    stroke-width: 5px;
+    
+   
+}
+.cir:hover{
+    transform:translateX(40px);
+}

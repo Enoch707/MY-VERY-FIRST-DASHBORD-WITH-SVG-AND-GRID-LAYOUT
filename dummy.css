@@ -1,0 +1,15 @@
+.chart-grid {
+  /* 1. Set the dark base background color */
+  background-color: #171b26; /* Matches the dark theme in your image */
+  
+  /* 2. Define the exact dimensions of your chart area */
+  width: 400px;
+  height: 300px;
+
+  /* 3. Draw the intersecting lines using gradients */
+    background-image: 
+    linear-gradient(to right, white 1px,transparent 1px),
+    linear-gradient(to bottom ,white 1px,transparent 1px);
+    background-size: 50px 50px;
+}
+

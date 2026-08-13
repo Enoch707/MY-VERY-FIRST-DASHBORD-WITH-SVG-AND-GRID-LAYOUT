@@ -1,0 +1,46 @@
+body{
+    background-color: black;
+    
+}
+.main{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    height: 250vh;
+}
+.blocks{
+  
+    font-size: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.a{
+    background: linear-gradient(180deg,rgb(106, 3, 3),rgb(255, 106, 0)) ;
+    color: rgb(211, 131, 3);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.b{
+    background: linear-gradient(180deg,rgb(129, 123, 6),rgb(12, 171, 3)) ;
+    color: rgb(119, 255, 0);
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+}
+.c{
+    background: linear-gradient(180deg,rgb(3, 111, 123),rgb(0, 45, 210)) ;
+    color: rgb(17, 0, 255);
+      border-radius: 20px;
+}
+.d{
+    background: linear-gradient(180deg,rgb(94, 3, 106),rgb(255, 0, 43)) ;
+    color: rgb(255, 0, 166);
+      border-radius: 20px;
+}
+.e{
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.f{
+    background-image: url(www.svg);
+}
